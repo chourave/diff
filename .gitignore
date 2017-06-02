@@ -1,0 +1,10 @@
+/.idea
+/.nrepl-history
+/.nrepl-port
+/node_modules
+/out
+/package.json
+/project.clj
+/target
+/*.iml
+*~
