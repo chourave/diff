@@ -13,7 +13,9 @@ This is a thin Clojure(Script) wrapper around the Java(Script) versions of the
 
 [diff-match-patch]: https://code.google.com/archive/p/google-diff-match-patch/
 
+
 ## Usage
+
 ```clojure
 (require '[plumula.diff :as d])
 
@@ -26,11 +28,15 @@ This is a thin Clojure(Script) wrapper around the Java(Script) versions of the
 `diff` can take optional keyword-arguments which are described in the following
 sections.
 
+
 ### Spec
+
 If you are using Clojure(Script) 1.9, feel free to peruse the nice specs in
 `plumula.diff.spec`.
 
+
 ### Optimising the output for readability
+
 In its default mode, `diff` will try to produce an output that is minimal, at
 the expense of readability.
 
@@ -44,7 +50,9 @@ to humans, at the expense of minimality. This will (roughly)
 (d/diff document-1 document-2 ::d/cleanup ::d/cleanup-semantic)
 ```
 
+
 ### Optimising the output for efficiency
+
 In terms of storage and computation, each operation in a diff output is likely
 to have a cost with a constant component, and a component that is proportional
 to the operation’s lenght in number of characters.
@@ -63,7 +71,9 @@ tuned with the `edit-cost` option. At the default setting of 4, the optimiser
 will accept to increase the character-count of the diff by up to 4 characters in
 order to save an edit operation.
 
+
 ### Optimising the output while keeping a minimal diff (bad idea)
+
 If you don’t like the idea of sacrificing minimality, but still want to improve
 the readability or efficiency of diff’s output, there are options for that.
 They are poor compromises, though, because the minimality constraint doesn’t
@@ -80,7 +90,9 @@ make sense if the cost of an edit is negligible vs the cost of a character in
 the output. It could be argued that there isn’t much of a point in reducing the
 number of edit operations at all in that case though.
 
+
 ### Disabling the line-diff optimisation
+
 To speed up computations, `diff` will pre-process the texts by diffing them
 line-by-line. On long documents with multiple small edits, this can lead to an
 order of magnitude improvement in speed and memory consumption. However, there
@@ -94,7 +106,9 @@ the optimisation:
 (d/diff document-1 document-2 ::d/check-lines false)
 ```
 
+
 ### Changing the maximum run-time
+
 The diffing process consists of relatively fast pre- and post-processing
 steps surrounding a potentially long-running diff-optimising step. By default,
 this optimising step will time out after a run time of 1 second, returning a
@@ -113,12 +127,20 @@ long optimising step:
 ```
 
 ## Known limitations
+
 - The `match` and `patch` functions are not currently wrapped
 - Depends on both the Java and JavaScript library, even if your project targets
   only one of Clojure or ClojureScript. The unneeded dependency will get
   compiled away but it’s still a useless download.
 
+
+## Change log
+
+The notable changes to this project are documented in the [change log](CHANGELOG.md).
+
+
 ## License
+
 Distributed under the [Apache License, Version 2.0](LICENSE.txt).
 Copyright &copy; 2017 Frederic Merizen.
 
