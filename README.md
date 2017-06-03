@@ -11,8 +11,6 @@ A _fast_ text diff library for Clojure and ClojureScript.
 This is a thin Clojure(Script) wrapper around the Java(Script) versions of the
 [Diff, Match and Patch library][diff-match-patch] by Neil Fraser.
 
-[diff-match-patch]: https://code.google.com/archive/p/google-diff-match-patch/
-
 
 ## Usage
 
@@ -136,13 +134,19 @@ long optimising step:
 
 ## Change log
 
-The notable changes to this project are documented in the [change log](CHANGELOG.md).
+The notable changes to this project are documented in the
+[change log](CHANGELOG.md).
 
 
 ## License
 
 Distributed under the [Apache License, Version 2.0](LICENSE.txt).
-Copyright &copy; 2017 Frederic Merizen.
+Copyright &copy; 2017 [Frederic Merizen][frederic-merizen].
 
-The underlying Diff, Match and Patch Library is distributed under the
-Apache License, Version 2.0 and copyright &copy; 2006 Google Inc.
+The underlying [Diff, Match and Patch Library][diff-match-patch] is distributed
+under the [Apache License, Version 2.0][apache-2-license] and copyright &copy;
+2006 Google Inc.
+
+[apache-2-license]: http://www.apache.org/licenses/LICENSE-2.0
+[diff-match-patch]: https://code.google.com/archive/p/google-diff-match-patch/
+[frederic-merizen]: https://www.linkedin.com/in/fredericmerizen/
