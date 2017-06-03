@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+- 
+
+
+## [0.1.1] 2017-06-03
+### Added
+
+- Missing POM metadata
+
 ## [0.1.0] 2017-06-02
 
 ### Added
@@ -15,5 +23,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 [diff-match-patch]: https://code.google.com/archive/p/google-diff-match-patch/
 
-[Unreleased]: https://github.com/plumula/diff/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/plumula/diff/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/plumula/diff/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/plumula/diff/compare/init...0.1.0
