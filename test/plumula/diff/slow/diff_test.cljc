@@ -12,13 +12,9 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-(ns plumula.diff-test
-  (:require [plumula.diff :as d]
-            [clojure.test :refer [deftest is testing run-tests]]))
+(ns plumula.diff.slow.diff-test
+    (:require [plumula.diff :as d]
+              [plumula.diff.spec]
+              [plumula.mimolette.alpha :refer [defspec-test]]))
 
-(deftest test-diff
-  (testing "diff"
-    (is (= [{::d/operation ::d/delete, ::d/text "a"}
-            {::d/operation ::d/equal, ::d/text "bcd"}
-            {::d/operation ::d/insert, ::d/text "e"}]
-           (d/diff "abcd" "bcde")))))
+(defspec-test test-diff-spec `d/diff)
