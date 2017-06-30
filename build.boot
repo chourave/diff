@@ -15,12 +15,12 @@
 (def +project+ 'plumula/diff)
 (def +version+ "0.1.2-SNAPSHOT")
 
-(set-env! :dependencies '[[plumula/soles "0.5.0-SNAPSHOT" :scope "test"]])
-(require '[plumula.soles :refer [add-dir! add-dependencies! testing deploy-local deploy-snapshot deploy-release]])
+(set-env! :dependencies '[[plumula/soles "0.5.0" :scope "test"]])
+(require '[plumula.soles :refer [add-dependencies! add-dir! deploy-local deploy-snapshot deploy-release old testing]])
 
 (add-dependencies! '(:provided
                       [org.clojure/clojure "1.9.0-alpha17"]
-                      [org.clojure/clojurescript "1.9.562"])
+                      [org.clojure/clojurescript "1.9.671"])
                    '(:compile
                       [com.sksamuel.diff/diff "1.1.11"]
                       [cljsjs/google-diff-match-patch "20121119-2"])
@@ -29,12 +29,12 @@
                       [adzerk/boot-cljs-repl "0.3.3"]
                       [adzerk/boot-reload "0.5.1"]
                       [adzerk/boot-test "1.2.0"]
-                      [com.cemerick/piggieback "0.2.1"]
+                      [com.cemerick/piggieback "0.2.2"]
                       [crisptrutski/boot-cljs-test "0.3.0"]
                       [doo "0.1.7"]
-                      [org.clojure/tools.nrepl "0.2.12"]
+                      [org.clojure/tools.nrepl "0.2.13"]
                       [pandeiro/boot-http "0.8.3"]
-                      [plumula/mimolette "0.2.1-SNAPSHOT"]
+                      [plumula/mimolette "0.2.1"]
                       [weasel "0.7.0"]))
 
 (require '[adzerk.boot-cljs :refer [cljs]]
